@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href = "./assets/style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>code quiz</h1>
+    </header>
+    <main>
+        <div id="start-page">
+            <p>answer the following code-related questions within 60 seconds. be careful! 
+                incorrect answers will penalize your time and score!</p>
+            <button>start game</button>
+        </div>
+        <div id="game-box">
+            <div id="countdown-box"></div>
+            <div id="question-section">
+                <!--Check to see if ul should be outside of the div?-->
+                <ul id="answer-choices"></ul>
+            </div>
+        </div>
+        <div id="end-page">
+            <div id ="intials-input">
+                <div id="input-box"></div>
+                <div id="submit-button"></div>
+            </div>
+        </div>
+        <div id="rank-page">
+            <ul id="score-rank"></ul>
+            <div id="start-game"></div>
+            <div id="clear-scores"></div>
+        </div>
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>

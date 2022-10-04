@@ -1,0 +1,57 @@
+:root {
+    --light-background: #f3d7ca;
+    --dark-background: #e6a4b4;
+    --button-background: #c86b85;
+    --text-light: #fdfdcb ;
+    --text-pink: #f70776;
+}
+
+body {
+    background-color: var(--light-background);
+    color: var(--text-pink);
+}
+
+header {
+    color: var(--text-pink);
+    text-align: center;
+    margin: 0;
+}
+
+main{
+    display: flex;
+}
+button{
+    background-color: var(--button-background);
+    color:white;
+    border-radius: 25px;
+    text:15px;
+}
+
+p {
+    text-align: center;
+}
+/*
+#word-box {
+    background-color: var(--boxColor);
+    text-align: center;
+    color: var(--gameTextColor);
+    height: 30vh;
+    width: 50vw;
+    font-size: 5vh;
+    display:inline-block;
+    justify-items: center;
+}
+
+#game-score {
+    background-color: var(--boxColor);
+    color: var(--gameTextColor);
+    width:50vw;
+    height:30vh;
+    flex-direction: row;
+    display: inline-block;
+}
+
+#game-timer {
+    color: var(--gameTextColor);
+    align-items: center;
+}*/
