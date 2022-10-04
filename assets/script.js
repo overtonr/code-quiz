@@ -38,6 +38,8 @@ startButton.addEventListener("click", startGame());
     }
 
 //Questions displayed
+//Iterates through each question and its options
+//Iterates through one at a time until either all the questions are answered or the timer runs out
 questions = {
     question: "which of the following is considered a correct example of camel case for variable naming?" [
         {choices: ["super-cool-new-variable-name","superCoolNewVariableName","supercool.newvariable.name","Supercoolnewvariablename"],
@@ -81,40 +83,31 @@ questions = {
         }],
 }
 
+//function that decrements 10 seconds from time from the countdown if the correctChoice is not chosen
 
 
 function resetGame(){
     gameOver = false;
     timeLeft = 60;
-//something to do with the array of questions
-    clearInterval(timeInterval);}
-
-
-// function game(){
-//     resetGame();
-    
-// }
-
-
-
-function countdown(){
-    if(!gameOver) {
-        if (timeLeft > 0) {
-            countdownBox.textContent = "time left: " + timeLeft;
-//decrements time when time > 0
-            timeLeft--;
-        } else {
-            gameOver = true;
-//something to navigate to highsores page
-        }
-    }
+//something to do with the array of questions (starting from the begining or "deleting"(?) all of the record of any progress if the timer runs out)
+    clearInterval(timeInterval);
+//the ability to start the game again with the start button
 }
 
+//Using JSON.strigify(), converts object into a string
+//store string into the localStorage as a key-value pair
 
-function setTime(){
-    var timeInterval = setInterval(function(){
-        secondsLeft--;
-        countdownBox.textContent = timeLeft 
-    }
-    )
-}
+//localStorage.setItem("playerInitialsStrigify",JSON.stringify(playerInitials));
+//localStorage.setItem("playerScoreStrigify",JSON.stringify(playerScore));
+
+// function enterLeaderboard();
+//     if ((timeLeft !== 0) && gameOver) {
+//         document.getElementById("initials-input");
+//         //something to do with the time left(the score);
+//     }
+
+//submitButton.addEventListener("click",function(event)) {
+//     event.preventDefault();
+//     saveRanking()?;
+//     enterLeaderboard()?;
+// });
