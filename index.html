@@ -14,27 +14,29 @@
     </header>
     <main>
         <div id="start-page">
+            <!--Text should be within the function-->
             <p>answer the following code-related questions within 60 seconds. be careful! 
                 incorrect answers will penalize your time and score!</p>
-            <button>start game</button>
+            <button class="start-game">start game</button>
         </div>
         <div id="game-box">
             <div id="countdown-box"></div>
-            <div id="question-section">
+            <div id="question-section" style="display:none">
                 <!--Check to see if ul should be outside of the div?-->
-                <ul id="answer-choices"></ul>
             </div>
+            <ul id="answer-choices"></ul>
         </div>
         <div id="end-page">
-            <div id ="intials-input">
-                <div id="input-box"></div>
-                <div id="submit-button"></div>
+            <!--Text should be within the function-->
+                <p>the game is finished! your final score is ___. enter your initials to save your high score</p>
+                <div id="initials-input"></div>
+                <button id="submit-button"></button>
             </div>
         </div>
         <div id="rank-page">
             <ul id="score-rank"></ul>
-            <div id="start-game"></div>
-            <div id="clear-scores"></div>
+            <button class="start-game"></button>
+            <button id="clear-scores"></button>
         </div>
     </main>
 

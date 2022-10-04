@@ -3,55 +3,33 @@
     --dark-background: #e6a4b4;
     --button-background: #c86b85;
     --text-light: #fdfdcb ;
-    --text-pink: #f70776;
+    --pink: #f70776;
 }
 
 body {
     background-color: var(--light-background);
-    color: var(--text-pink);
+    color: var(--pink);
 }
 
 header {
-    color: var(--text-pink);
+    color: var(--pink);
     text-align: center;
     margin: 0;
+    font-size: 5vh;
 }
 
 main{
     display: flex;
 }
 button{
-    background-color: var(--button-background);
-    color:white;
+    background-color: var(--pink);
     border-radius: 25px;
-    text:15px;
+    font-size:3vh;
+    border-color:var(--text-light);
+    color: var(--text-light);
 }
 
-p {
+#start-page {
     text-align: center;
+    display:flex;
 }
-/*
-#word-box {
-    background-color: var(--boxColor);
-    text-align: center;
-    color: var(--gameTextColor);
-    height: 30vh;
-    width: 50vw;
-    font-size: 5vh;
-    display:inline-block;
-    justify-items: center;
-}
-
-#game-score {
-    background-color: var(--boxColor);
-    color: var(--gameTextColor);
-    width:50vw;
-    height:30vh;
-    flex-direction: row;
-    display: inline-block;
-}
-
-#game-timer {
-    color: var(--gameTextColor);
-    align-items: center;
-}*/
