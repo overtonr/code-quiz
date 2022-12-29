@@ -23,7 +23,7 @@ var timeInterval;
 // var gameBody = document.querySelector("body");
 
 
-startButton.addEventListener("click", startGame());
+startButton.addEventListener("click", startCountdown());
 
 //Start button: starts the quiz: starts the timer
     function startCountdown(){
@@ -83,7 +83,9 @@ questions = {
         }],
 }
 
-//function that decrements 10 seconds from time from the countdown if the correctChoice is not chosen
+//function that decrements 10 seconds from time from the countdown if the correctChoice is not chosen and then ...
+// if correct choice is clicked, then move on to the next question in the list
+// else take 10 seconds off of the time and then move on to the next question on the list
 
 
 function resetGame(){
@@ -111,3 +113,12 @@ function resetGame(){
 //     saveRanking()?;
 //     enterLeaderboard()?;
 // });
+
+
+//scores and initials stored, (ranked with highest score at the top)
+//option to clear rankings
+
+//todo:
+//how to set default elements when page is loaded
+//game starts and only one question is displayed at a time
+//hide? elements that are not in use

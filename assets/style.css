@@ -1,18 +1,18 @@
 :root {
-    --light-background: #f3d7ca;
-    --dark-background: #e6a4b4;
-    --button-background: #c86b85;
-    --text-light: #fdfdcb ;
-    --pink: #f70776;
+    --light-background: white ;
+    --dark-background: #fafd86;
+    --button-background: #f3f049;
+    --text-light: #ffffff ;
+    --dark: #b1b1b1;
 }
 
 body {
     background-color: var(--light-background);
-    color: var(--pink);
+    color: var(--dark);
 }
 
 header {
-    color: var(--pink);
+    color: var(--dark);
     text-align: center;
     margin: 0;
     font-size: 5vh;
@@ -22,7 +22,7 @@ main{
     display: flex;
 }
 button{
-    background-color: var(--pink);
+    background-color: var(--dark);
     border-radius: 25px;
     font-size:3vh;
     border-color:var(--text-light);
