@@ -1,35 +1,25 @@
 :root {
-    --light-background: white ;
-    --dark-background: #fafd86;
-    --button-background: #f3f049;
-    --text-light: #ffffff ;
-    --dark: #b1b1b1;
+    --light-background: #fbfef9 ;
+    /* --dark-background: #fafd86; */
+    --button-background: #f79f79;
+    --text-grey: #6d696a ;
+    /* --dark: #b1b1b1; */
 }
 
-body {
-    background-color: var(--light-background);
-    color: var(--dark);
+* {
+ color: var(--text-grey);
+ background-color: var(--light-background);
 }
 
-header {
-    color: var(--dark);
-    text-align: center;
-    margin: 0;
-    font-size: 5vh;
-}
-
-main{
-    display: flex;
-}
 button{
-    background-color: var(--dark);
-    border-radius: 25px;
-    font-size:3vh;
-    border-color:var(--text-light);
-    color: var(--text-light);
+    background-color: var(--button-background);
+    border-radius: 4px;
+    font-size: 20px;
+    width: 179px;
+    height: 49px;
+    border: none;
+    text-align: center;
+    color: var(--text-grey);
 }
 
-#start-page {
-    text-align: center;
-    display:flex;
-}
+
