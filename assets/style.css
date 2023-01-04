@@ -1,17 +1,16 @@
 :root {
-    --light-background: #fbfef9 ;
-    /* --dark-background: #fafd86; */
+    --light-background: #fbfef9;
     --button-background: #f79f79;
-    --text-grey: #6d696a ;
-    /* --dark: #b1b1b1; */
+    --text-grey: #6d696a;
 }
 
 * {
- color: var(--text-grey);
- background-color: var(--light-background);
+    color: var(--text-grey);
+    background-color: var(--light-background);
 }
 
-button{
+button,
+#countdown-box {
     background-color: var(--button-background);
     border-radius: 4px;
     font-size: 20px;
@@ -23,3 +22,58 @@ button{
 }
 
 
+#view-scores {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
+#countdown-box {
+    position: absolute;
+    left: 1250px;
+    top: 20px;
+}
+
+
+h1 {
+    position: absolute;
+    width: 450px;
+    height: 96px;
+    left: 495px;
+    top: 177px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+}
+
+p {
+    position: absolute;
+    width: 463px;
+    height: 197px;
+    left: 488px;
+    top: 250px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+/* #start-page {
+    display: none;
+} */
+
+input {
+    border-color: var(--text-grey);
+    border-style: solid;
+    border-radius: 4px;
+}
+
+#submit-btn, 
+#start-btn{
+position: absolute;
+width: 179px;
+height: 49px;
+left: 630px;
+top: 398px;
+}

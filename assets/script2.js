@@ -29,7 +29,7 @@ startButton.addEventListener("click", startCountdown());
     function startCountdown(){
         var timeInterval = setInterval (function() {
             timeLeft--;
-            countdownBox.textContent = "time left: " + timeLeft;
+            countdownBox.textContent = timeLeft;
         if (timeLeft === 0) {
             clearInterval(timeInterval);
             gameFinished();

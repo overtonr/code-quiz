@@ -10,34 +10,29 @@
 </head>
 <body>
     <header>
-        <h1>code quiz</h1>
+        <button id="view-score"> view high scores</button>
+        <div id="countdown-box"> time left: __ sec</div>
     </header>
     <main>
         <div id="start-page">
             <!--Text should be within the function-->
+            <h1 id="title">code quiz</h1>
             <p>answer the following code-related questions within 60 seconds. be careful! 
                 incorrect answers will penalize your time and score!</p>
-            <button class="start-game">start game</button>
+            <button id="start-btn">start game</button>
         </div>
-        <div id="game-box">
-            <div id="countdown-box"></div>
-            <div id="question-section" style="display:none">
-                <!--Check to see if ul should be outside of the div?-->
-            </div>
-            <ul id="answer-choices"></ul>
-        </div>
-        <div id="end-page">
-            <!--Text should be within the function-->
-                <p>the game is finished! your final score is ___. enter your initials to save your high score</p>
-                <div id="initials-input"></div>
-                <button id="submit-button">submit</button>
-            </div>
-        </div>
-        <div id="rank-page">
-            <ul id="score-rank"></ul>
-            <button class="start-game">start game</button>
-            <button id="clear-scores">clear scores</button>
-        </div>
+        <!-- <div id="end-page">
+            <h1>all done!</h1> 
+            <p id="player-score">your final score is __
+                <br />
+                enter initials: <input id="initials">
+                </p>
+                <button id="submit-btn">submit</button>
+
+         </div> -->
+        
+        
+    
     </main>
 
     <script src="./assets/script.js"></script>
