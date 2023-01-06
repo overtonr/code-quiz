@@ -3,6 +3,7 @@
     --button-background: #f79f79;
     --button-light: #f9ba9f;
     --text-grey: #6d696a;
+    --btn-height: 49px;
 }
 
 * {
@@ -12,17 +13,17 @@
 
 #view-score,
 #countdown-box,
-#start-btn, 
+#start-btn,
 #submit-btn,
-#clear, #new-game {
+#clear,
+#new-game {
     background-color: var(--button-background);
     border-radius: 4px;
     font-size: 20px;
     width: 179px;
-    height: 49px;
+    height: var(--btn-height);
     border: none;
     text-align: center;
-    color: var(--text-grey);
 }
 
 
@@ -77,7 +78,7 @@ input {
 #start-btn {
     position: absolute;
     width: 179px;
-    height: 49px;
+    height: var(--btn-height);
     left: 630px;
     top: 398px;
 
@@ -116,7 +117,7 @@ h3 {
 
 #ans {
     width: 324px;
-    height: 48.12px;
+    height: var(--btn-height);
     font-size: 20px;
     border: none;
     text-align: center;
@@ -126,7 +127,7 @@ h3 {
     margin: 17px;
 }
 
-input{
+input {
     width: 65px;
 }
 
@@ -135,36 +136,35 @@ input{
     width: 65px;
 }
 
-#new-game{
-position: absolute;
-width: 179px;
-height: 53px;
-left: 500px;
-top: 370px;
+#new-game {
+    position: absolute;
+    width: 179px;
+    height: var(--btn-height);
+    left: 505px;
+    top: 360px;
 }
 
-#clear{
-position: absolute;
-width: 179px;
-height: 49px;
-left: 756px;
-top: 370px;
+#clear {
+    position: absolute;
+    width: 179px;
+    height: var(--btn-height);
+    left: 760px;
+    top: 360px;
 }
 
-#saved{
-position: absolute;
-text-align: center;
-width: 145px;
-height: 26px;
-left: 657px;
-top: 275px;
+#saved {
+    position: absolute;
+    text-align: center;
+    width: 145px;
+    height: 26px;
+    left: 660px;
+    top: 275px;
 }
 
-#in{
+#in {
     border: none;
     text-align: center;
     /* background-color: var(--button-background); */
-    color: var(--text-grey);
     display: block;
     margin: 7px;
 }
