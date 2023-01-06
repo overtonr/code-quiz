@@ -12,7 +12,9 @@
 
 #view-score,
 #countdown-box,
-#start-btn {
+#start-btn, 
+#submit-btn,
+#clear, #new-game {
     background-color: var(--button-background);
     border-radius: 4px;
     font-size: 20px;
@@ -78,6 +80,7 @@ input {
     height: 49px;
     left: 630px;
     top: 398px;
+
 }
 
 #question-card {
@@ -107,7 +110,7 @@ h3 {
 #answer-btns {
     position: absolute;
     background-color: var(--text-grey);
-    left: 233px;
+    left: 230px;
     top: 175px;
 }
 
@@ -120,5 +123,48 @@ h3 {
     background-color: var(--button-background);
     color: var(--text-grey);
     display: block;
-    margin: 15px;
+    margin: 17px;
+}
+
+input{
+    width: 65px;
+}
+
+#saved {
+    border: var(--text-grey);
+    width: 65px;
+}
+
+#new-game{
+position: absolute;
+width: 179px;
+height: 53px;
+left: 500px;
+top: 370px;
+}
+
+#clear{
+position: absolute;
+width: 179px;
+height: 49px;
+left: 756px;
+top: 370px;
+}
+
+#saved{
+position: absolute;
+text-align: center;
+width: 145px;
+height: 26px;
+left: 657px;
+top: 275px;
+}
+
+#in{
+    border: none;
+    text-align: center;
+    /* background-color: var(--button-background); */
+    color: var(--text-grey);
+    display: block;
+    margin: 7px;
 }
