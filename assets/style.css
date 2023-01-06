@@ -1,6 +1,7 @@
 :root {
     --light-background: #fbfef9;
     --button-background: #f79f79;
+    --button-light: #f9ba9f;
     --text-grey: #6d696a;
 }
 
@@ -9,8 +10,9 @@
     background-color: var(--light-background);
 }
 
-button,
-#countdown-box {
+#view-score,
+#countdown-box,
+#start-btn {
     background-color: var(--button-background);
     border-radius: 4px;
     font-size: 20px;
@@ -22,7 +24,7 @@ button,
 }
 
 
-#view-scores {
+#view-score {
     position: absolute;
     left: 30px;
     top: 20px;
@@ -69,11 +71,54 @@ input {
     border-radius: 4px;
 }
 
-#submit-btn, 
-#start-btn{
-position: absolute;
-width: 179px;
-height: 49px;
-left: 630px;
-top: 398px;
+#submit-btn,
+#start-btn {
+    position: absolute;
+    width: 179px;
+    height: 49px;
+    left: 630px;
+    top: 398px;
+}
+
+#question-card {
+    background-color: var(--text-grey);
+    position: absolute;
+    width: 826px;
+    height: 475px;
+    left: 296px;
+    top: 319px;
+}
+
+h3 {
+    position: relative;
+    width: 560px;
+    height: 77px;
+    left: 131px;
+    top: 67px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--light-background);
+    background-color: var(--text-grey);
+}
+
+
+#answer-btns {
+    position: absolute;
+    background-color: var(--text-grey);
+    left: 233px;
+    top: 175px;
+}
+
+#ans {
+    width: 324px;
+    height: 48.12px;
+    font-size: 20px;
+    border: none;
+    text-align: center;
+    background-color: var(--button-background);
+    color: var(--text-grey);
+    display: block;
+    margin: 15px;
 }

@@ -1,6 +1,6 @@
 
 var startPage = document.querySelector("#start-page");
-var startButton = document.querySelector(".start-game");
+var startButton = document.querySelector("#start-btn");
 var gameBox = document.querySelector("#game-box");
 var countdownBox = document.querySelector("#countdown-box");
 var questionSection = document.querySelector("#question-section");
@@ -29,7 +29,7 @@ startButton.addEventListener("click", startCountdown());
     function startCountdown(){
         var timeInterval = setInterval (function() {
             timeLeft--;
-            countdownBox.textContent = "time left: " + timeLeft;
+            countdownBox.textContent = "time left: " + timeLeft + " secs";
         if (timeLeft === 0) {
             clearInterval(timeInterval);
             gameFinished();

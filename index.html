@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href = "./assets/style.css">
-    
+    <link rel="stylesheet" href="./assets/style.css">
+
 </head>
+
 <body>
     <header>
         <button id="view-score"> view high scores</button>
-        <div id="countdown-box"> time left: __ sec</div>
+        <button id="countdown-box"> timer</button>
     </header>
     <main>
-        <div id="start-page">
-            <!--Text should be within the function-->
+        <!-- <section> -->
+        <!-- <div id="start-page">
+            Text should be within the function
             <h1 id="title">code quiz</h1>
-            <p>answer the following code-related questions within 60 seconds. be careful! 
+            <p>answer the following code-related questions within 60 seconds. be careful!
                 incorrect answers will penalize your time and score!</p>
             <button id="start-btn">start game</button>
+        </div> -->
+    <!-- </section> -->
+        <section>
+        <div id="question-card">
+            <!-- <h3> question</h3> -->
+            <h3>which of the following is considered a correct example of camel case for variable naming?</h3>
+            <div id="answer-btns">
+            <button id="ans">answer1</button>
+            <button id="ans">answer2</button>
+            <button id="ans">answer3</button>
+            <button id="ans">answer4</button>
+            </div>
         </div>
+    </section>
         <!-- <div id="end-page">
             <h1>all done!</h1> 
             <p id="player-score">your final score is __
@@ -30,11 +46,12 @@
                 <button id="submit-btn">submit</button>
 
          </div> -->
-        
-        
-    
+
+
+
     </main>
 
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
