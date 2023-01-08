@@ -1,14 +1,33 @@
 // vars set to query selectors to manipulate DOM
+
+//header elements
 var countdownEl = document.getElementById("countdown-box");
 var viewEl = document.getElementById("view-score");
 
+
+//start page elements
 var startCon = document.getElementById("start-page");
 var startBtn = document.getElementById("start-btn");
 
-
+//question page elements
 var questionCon = document.getElementById("question-card");
 var questionEl = document.getElementById("question");
-var answerBtn = document.getElementById("ans");
+var ansBtns = document.getElementById("answer-btns");
+var ans = document.querySelector(".ans");
+
+//results page elements
+var resultsCon = document.getElementById("end-page");
+var score = document.getElementById("player-score");
+var initialInput = document.getElementById("initials");
+var submitInitial = document.getElementById("submit-btn")
+
+//high scores page elements
+var leaderCon = document.getElementById("leaderboard");
+var savedCon = document.getElementById("saved")
+var savedInitial = document.getElementById("in");
+
+var newGameBtn = document.getElementById("new-game");
+var clearBtn = document.getElementById("clear");
 
 
 
@@ -124,7 +143,7 @@ var timeInterval;
 
 //start button click event listener
 
-startBtn.addEventListener("click", startQuiz());
+// startBtn.addEventListener("click", startQuiz());
 
 //game counter time el
 
@@ -141,35 +160,36 @@ function timerFun() {
 
 //start game function
 function startQuiz() {
-    startCon.classList.add("hide");
+    // startCon.classList.add("hide");
     shuffleQues = questions.sort(() => Math.random() - .5)
     currentQues = 0
-    questionCon.classList.remove("hide");
+    // questionCon.classList.remove("hide");
     timerFun();
     nextQues();
 }
 
 //after answer is selected, go to next question
-function nextQues() {
-    resetState();
-    showQues(shuffleQues[currentQues]);
-};
+// function nextQues() {
+//     resetState();
+//     showQues(shuffleQues[currentQues]);
+// };
 
 //DOM manipulation that displays questions
-function showQues(question) {
-    questionEl.innerText = question.question
-    question.answers.forEach(answer => {
-        var button = document.createElement("button")
-        button.innerText = answer.text
-        button.classList.add("btn")
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        }
-        button.addEventListener("click", selectAnswer)
-        answerButtonsEl.appendChild(button)
-    })
-};
+// function showQues(question) {
+//     questionEl.innerText = question.question
+//     question.answers.forEach(answer => {
+//         var button = document.createElement("button")
+//         button.innerText = answer.text
+//         button.classList.add("btn")
+//         if (answer.correct) {
+//             button.dataset.correct = answer.correct
+//         }
+//         button.addEventListener("click", selectAnswer)
+//         answerButtonsEl.appendChild(button)
+//     })
+// };
 //reset state
 
 //select answer element target
 
+startBtn.addEventListener("click", startQuiz());
