@@ -10,6 +10,114 @@ var questionCon = document.getElementById("question-card");
 var questionEl = document.getElementById("question");
 var answerBtn = document.getElementById("ans");
 
+
+
+//question var as an array that contains object representing each question, the possible ans, and boolean of whether the answer is the correct choice
+var questions = [
+    {
+        question: "which of the following is considered a correct example of camel case for variable naming?",
+        answers: [
+            { text: "super-cool-new-variable-name", correct: false },
+            { text: "superCoolNewVariableName", correct: true },
+            { text: "supercool.newvariable.name", correct: false },
+            { text: "Supercoolnewvariablename", correct: false },
+        ]
+
+    },
+    {
+        question: "what is the correct way to refer to a class in CSS?",
+        answers: [
+            { text: "$(“class”) {}", correct: false },
+            { text: "#class {}", correct: false },
+            { text: ".class {}", correct: true },
+            { text: "-class {}", correct: false },
+        ]
+
+    },
+    {
+        question: "which of the following allows you to provide instructions when the conditions are true AND when they are false?",
+        answers: [
+            { text: "if/else", correct: true },
+            { text: "first/then", correct: false },
+            { text: "first/else", correct: false },
+            { text: "if/then", correct: false },
+        ]
+
+    },
+    {
+        question: "which of the following can be stored in the ::root pseudoclass in CSS?",
+        answers: [
+            { text: "text-align", correct: false },
+            { text: "border-radius", correct: false },
+            { text: "neither a or b", correct: false },
+            { text: "both a and b", correct: true },
+        ]
+
+    },
+    {
+        question: "which of the following would you NOT expect to see when using the “typeof” operator?",
+        answers: [
+            { text: "string", correct: false },
+            { text: "undefined", correct: false },
+            { text: "boolean", correct: false },
+            { text: "null", correct: true },
+        ]
+
+    },
+    {
+        question: "what is the correct range of numbers returned in the math.random() method?",
+        answers: [
+            { text: "0.0 to 1.0", correct: true },
+            { text: "0 to 100", correct: false },
+            { text: "1.0 to 2.0", correct: false },
+            { text: "-1.0 to 1.0", correct: false },
+        ]
+
+    },
+    {
+        question: "what is the correct key code range for letters “A” - “Z” on the keyboard?",
+        answers: [
+            { text: "0 - 25", correct: false },
+            { text: "1 - 26", correct: false },
+            { text: "40 - 65", correct: false },
+            { text: "65 - 90", correct: true },
+        ]
+
+    },
+    {
+        question: "which of the following is NOT an example of a self closing tag?",
+        answers: [
+            { text: "<br />", correct: false },
+            { text: "<hr />", correct: false },
+            { text: "<h1 />", correct: true },
+            { text: "<img />", correct: false },
+        ]
+
+    },
+    {
+        question: "which of the following is used to remove any leading and trailing spaces?",
+        answers: [
+            { text: "clear()", correct: false },
+            { text: "cut()", correct: false },
+            { text: "trim()", correct: true },
+            { text: "snip()", correct: false },
+        ]
+
+    },
+    {
+        question: "which comparison operator means “not equal”?",
+        answers: [
+            { text: "?=", correct: false },
+            { text: "!=", correct: true },
+            { text: "*=", correct: false },
+            { text: "^=", correct: false },
+        ]
+
+    }
+
+]
+
+
 var gameOver = true;
 var timeLeft = 60;
 var timeInterval;

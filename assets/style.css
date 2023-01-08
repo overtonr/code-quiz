@@ -115,7 +115,7 @@ h3 {
     top: 175px;
 }
 
-#ans {
+.ans {
     width: 324px;
     height: var(--btn-height);
     font-size: 20px;
