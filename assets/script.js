@@ -156,12 +156,19 @@ function startQuiz() {
 //DOM manipulation that displays questions
 function showQues(question) {
     setQues(question.prompt);
+    setAns(question.text);
 };
 
 function setQues(question) {
-    document.getElementById("question").textContent = question;
+    questionEl.textContent = question;
+    
+};
 
+function setAns(text){
+    ans.textContent = text;
+    // ans.setAttribute(answer,".ans");
 }
+
 
 
 //reset state
