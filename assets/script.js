@@ -27,7 +27,7 @@ var clearBtn = document.getElementById("clear");
 //question var as an array that contains object representing each question, the possible ans, and boolean of whether the answer is the correct choice
 var quesArr = [
     {
-        question: "which of the following is considered a correct example of camel case for variable naming?",
+        prompt: "which of the following is considered a correct example of camel case for variable naming?",
         answers: [
             { text: "super-cool-new-variable-name", correct: false },
             { text: "superCoolNewVariableName", correct: true },
@@ -36,7 +36,7 @@ var quesArr = [
         ]
     },
     {
-        question: "what is the correct way to refer to a class in CSS?",
+        prompt: "what is the correct way to refer to a class in CSS?",
         answers: [
             { text: "$(“class”) {}", correct: false },
             { text: "#class {}", correct: false },
@@ -45,7 +45,7 @@ var quesArr = [
         ]
     },
     {
-        question: "which of the following allows you to provide instructions when the conditions are true AND when they are false?",
+        prompt: "which of the following allows you to provide instructions when the conditions are true AND when they are false?",
         answers: [
             { text: "if/else", correct: true },
             { text: "first/then", correct: false },
@@ -54,7 +54,7 @@ var quesArr = [
         ]
     },
     {
-        question: "which of the following can be stored in the ::root pseudoclass in CSS?",
+        prompt: "which of the following can be stored in the ::root pseudoclass in CSS?",
         answers: [
             { text: "text-align", correct: false },
             { text: "border-radius", correct: false },
@@ -63,7 +63,7 @@ var quesArr = [
         ]
     },
     {
-        question: "which of the following would you NOT expect to see when using the “typeof” operator?",
+        prompt: "which of the following would you NOT expect to see when using the “typeof” operator?",
         answers: [
             { text: "string", correct: false },
             { text: "undefined", correct: false },
@@ -72,7 +72,7 @@ var quesArr = [
         ]
     },
     {
-        question: "what is the correct range of numbers returned in the math.random() method?",
+        prompt: "what is the correct range of numbers returned in the math.random() method?",
         answers: [
             { text: "0.0 to 1.0", correct: true },
             { text: "0 to 100", correct: false },
@@ -81,7 +81,7 @@ var quesArr = [
         ]
     },
     {
-        question: "what is the correct key code range for letters “A” - “Z” on the keyboard?",
+        prompt: "what is the correct key code range for letters “A” - “Z” on the keyboard?",
         answers: [
             { text: "0 - 25", correct: false },
             { text: "1 - 26", correct: false },
@@ -90,7 +90,7 @@ var quesArr = [
         ]
     },
     {
-        question: "which of the following is NOT an example of a self closing tag?",
+        prompt: "which of the following is NOT an example of a self closing tag?",
         answers: [
             { text: "<br />", correct: false },
             { text: "<hr />", correct: false },
@@ -99,7 +99,7 @@ var quesArr = [
         ]
     },
     {
-        question: "which of the following is used to remove any leading and trailing spaces?",
+        prompt: "which of the following is used to remove any leading and trailing spaces?",
         answers: [
             { text: "clear()", correct: false },
             { text: "cut()", correct: false },
@@ -108,7 +108,7 @@ var quesArr = [
         ]
     },
     {
-        question: "which comparison operator means “not equal”?",
+        prompt: "which comparison operator means “not equal”?",
         answers: [
             { text: "?=", correct: false },
             { text: "!=", correct: true },
@@ -129,7 +129,6 @@ startBtn.addEventListener("click", startQuiz);
 // newGameBtn.addEventListener("click", restartQuiz);
 
 //game counter time el
-
 function timerFun() {
     var timeInterval = setInterval(function () {
         timeLeft--;
@@ -145,43 +144,26 @@ function timerFun() {
 //start game function
 function startQuiz() {
     startCon.classList.add("hide");
-    // shuffleQues = questions.sort(() => Math.random() - .5)
-    currentQues = 0
+    //currentQues var works to return the question at the desired index
+    currentQues = 0;
     questionCon.classList.remove("hide");
     timerFun();
     showQues(quesArr[currentQues]);
-
-    //     nextQues();
 }
 
 //after answer is selected, go to next question
-// function nextQues() {
-//     resetState();
-//     showQues(shuffleQues[currentQues]);
-// };
 
 //DOM manipulation that displays questions
 function showQues(question) {
-    setQues(questions.question);
-    // setAns(question.answers.text);
-    //     questionEl.innerText = questions.question
-    //     question.answers.forEach(answers => {
-    //         var button = document.createElement("button")
-    //         button.innerText = answers.text
-    //         button.classList.add("btn")
-    //         if (answers.correct) {
-    //             button.dataset.correct = answers.correct
-    //         }
-    //         button.addEventListener("click", selectAnswer)
-    //         ansBtns.appendChild(button)
-    //     })
+    setQues(question.prompt);
 };
 
 function setQues(question) {
     document.getElementById("question").textContent = question;
-};
-// console.log(questionText);
-// console.log( typeof questionText);
+
+}
+
+
 //reset state
 
 //select answer element target
