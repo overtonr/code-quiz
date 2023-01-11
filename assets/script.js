@@ -123,7 +123,6 @@ var gameOver = true;
 var timeLeft = 80;
 var timeInterval;
 var currentQues;
-var currentAns;
 
 //start button click event listener
 startBtn.addEventListener("click", startQuiz);
@@ -138,6 +137,7 @@ function timerFun() {
         if (timeLeft === 0) {
             clearInterval(timeInterval);
             gameOver = true;
+            countdownEl.textContent = "time up!"
             // gameOver();
         }
     }, 1000);
@@ -153,36 +153,59 @@ function startQuiz() {
     showQues(quesArr[currentQues]);
 }
 
-//after answer is selected, go to next question
+
 
 //DOM manipulation that displays questions
 function showQues(question) {
     setQues(question.prompt);
-    setAns(question.text)
+    setAns(question.answers)
 };
 
+//text content set to questio
 function setQues(question) {
     questionEl.textContent = question;
-
 };
 
-function setAns(no) {
+//text content of each button set to answer options
+function setAns(ans) {
+    for (i in ans) {
+        var ansOpt = document.createElement("button")
+        ansBtns.appendChild(ansOpt);
+        ansOpt.setAttribute("class", "ans");
+        ansOpt.textContent = (ans[i].text);
+        ansOpt.addEventListener("click", function (e) {
+        ansSelect(e.target);
+      })}
+};
 
-    // for (var i in ansOptions) {
-    // var button = ansBtn.appendChild("button");
-    // button.innerText = answer.text
-    // button.classList.add("btn")
-    const node = document.createTextNode("This is new.");
-    ansBtns.appendChild(node);
-}
+
+function ansSelect(target){
+    if (currentQues === quesArr.length -1) {
+        // gameOver();
+        return;
+    }
+    // checkAns(target);
+
+    nextQues();
+};
+
+//after answer is selected, go to next question
+function nextQues(){
+    currentQues++;
+    
+    showQues(quesArr[currentQues])
+    
+};
 
 
-
+// function checkAns(target){
+//     if (target === !correct){
+//         timeLeft -= 5;
+//     }
+// }
 
 
 
 //reset state
 
 //select answer element target
-
-// startBtn.addEventListener("click", startQuiz());)
