@@ -122,6 +122,8 @@ var quesArr = [
 var gameOver = true;
 var timeLeft = 80;
 var timeInterval;
+var currentQues;
+var currentAns;
 
 //start button click event listener
 startBtn.addEventListener("click", startQuiz);
@@ -156,18 +158,26 @@ function startQuiz() {
 //DOM manipulation that displays questions
 function showQues(question) {
     setQues(question.prompt);
-    setAns(question.text);
+    setAns(question.text)
 };
 
 function setQues(question) {
     questionEl.textContent = question;
-    
+
 };
 
-function setAns(text){
-    ans.textContent = text;
-    // ans.setAttribute(answer,".ans");
+function setAns(no) {
+
+    // for (var i in ansOptions) {
+    // var button = ansBtn.appendChild("button");
+    // button.innerText = answer.text
+    // button.classList.add("btn")
+    const node = document.createTextNode("This is new.");
+    ansBtns.appendChild(node);
 }
+
+
+
 
 
 
@@ -175,4 +185,4 @@ function setAns(text){
 
 //select answer element target
 
-// startBtn.addEventListener("click", startQuiz());
+// startBtn.addEventListener("click", startQuiz());)
