@@ -87,7 +87,18 @@ input {
     width: 826px;
     height: 475px;
     left: 296px;
-    top: 319px;
+    top: 150px;
+}
+
+#ans-return {
+    color: var(--light-background);
+    position: relative;
+    left: 715px;
+    top: 315px;
+    background-color: var(--text-grey);
+    width: 2px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 h3 {

@@ -22,7 +22,7 @@ var savedInitial = document.getElementById("in");
 var newGameBtn = document.getElementById("new-game");
 var clearBtn = document.getElementById("clear");
 
-
+var ansReturn = document.getElementById("ans-return");
 
 //question var as an array that contains object representing each question, the possible ans, and boolean of whether the answer is the correct choice
 var quesArr = [
@@ -33,7 +33,8 @@ var quesArr = [
             { text: "superCoolNewVariableName", correct: true },
             { text: "supercool.newvariable.name", correct: false },
             { text: "Supercoolnewvariablename", correct: false },
-        ]
+        ],
+        correctAns: "superCoolNewVariableName"
     },
     {
         prompt: "what is the correct way to refer to a class in CSS?",
@@ -42,7 +43,8 @@ var quesArr = [
             { text: "#class {}", correct: false },
             { text: ".class {}", correct: true },
             { text: "-class {}", correct: false },
-        ]
+        ],
+        correctAns: ".class {}"
     },
     {
         prompt: "which of the following allows you to provide instructions when the conditions are true AND when they are false?",
@@ -51,7 +53,8 @@ var quesArr = [
             { text: "first/then", correct: false },
             { text: "first/else", correct: false },
             { text: "if/then", correct: false },
-        ]
+        ],
+        correctAns: "if/else"
     },
     {
         prompt: "which of the following can be stored in the ::root pseudoclass in CSS?",
@@ -60,7 +63,8 @@ var quesArr = [
             { text: "border-radius", correct: false },
             { text: "neither a or b", correct: false },
             { text: "both a and b", correct: true },
-        ]
+        ],
+        correctAns: "both a and b"
     },
     {
         prompt: "which of the following would you NOT expect to see when using the “typeof” operator?",
@@ -69,7 +73,8 @@ var quesArr = [
             { text: "undefined", correct: false },
             { text: "boolean", correct: false },
             { text: "null", correct: true },
-        ]
+        ],
+        correctAns: "null"
     },
     {
         prompt: "what is the correct range of numbers returned in the math.random() method?",
@@ -78,7 +83,8 @@ var quesArr = [
             { text: "0 to 100", correct: false },
             { text: "1.0 to 2.0", correct: false },
             { text: "-1.0 to 1.0", correct: false },
-        ]
+        ],
+        correctAns: "0.0 to 1.0"
     },
     {
         prompt: "what is the correct key code range for letters “A” - “Z” on the keyboard?",
@@ -87,7 +93,8 @@ var quesArr = [
             { text: "1 - 26", correct: false },
             { text: "40 - 65", correct: false },
             { text: "65 - 90", correct: true },
-        ]
+        ],
+        correctAns: "65 - 90"
     },
     {
         prompt: "which of the following is NOT an example of a self closing tag?",
@@ -96,7 +103,8 @@ var quesArr = [
             { text: "<hr />", correct: false },
             { text: "<h1 />", correct: true },
             { text: "<img />", correct: false },
-        ]
+        ],
+        correctAns: "<h1 />"
     },
     {
         prompt: "which of the following is used to remove any leading and trailing spaces?",
@@ -105,7 +113,8 @@ var quesArr = [
             { text: "cut()", correct: false },
             { text: "trim()", correct: true },
             { text: "snip()", correct: false },
-        ]
+        ],
+        correctAns: "trim()"
     },
     {
         prompt: "which comparison operator means “not equal”?",
@@ -114,7 +123,8 @@ var quesArr = [
             { text: "!=", correct: true },
             { text: "*=", correct: false },
             { text: "^=", correct: false },
-        ]
+        ],
+        correctAns: "!="
     }
 ];
 
@@ -176,33 +186,40 @@ function setAns(ans) {
         ansOpt.setAttribute("class", "ans");
         ansOpt.textContent = (ans[i].text);
         ansOpt.addEventListener("click", function (e) {
-        ansSelect(e.target);
-      })}
+            ansSelect(e.target);
+        })
+    }
 };
 
 
-function ansSelect(target){
-    if (currentQues === quesArr.length -1) {
+function ansSelect(target) {
+    if (currentQues === quesArr.length - 1) {
         // gameOver();
         return;
     }
-    // checkAns(target);
+    checkAns(target);
     nextQues();
 };
 
 //after answer is selected, go to next question
-function nextQues(){
+function nextQues() {
     currentQues++;
     showQues(quesArr[currentQues])
-    
+
 };
 
 
-// function checkAns(target){
-//     if (target === !correct){
-//         timeLeft -= 5;
-//     }
-// }
+function checkAns(target) {
+    if (target.textContent === quesArr[currentQues].correctAns) {
+        console.log("correct");
+        ansReturn.textContent = "correct!";
+    } else {
+        ansReturn.textContent = "incorrect";
+        console.log("incorrect")
+        timeLeft -= 5;
+
+    }
+};
 
 
 
