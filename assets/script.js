@@ -166,8 +166,10 @@ function setQues(question) {
     questionEl.textContent = question;
 };
 
-//text content of each button set to answer options
+//appends button for each answer option
 function setAns(ans) {
+    //clears content before reappending buttons
+    ansBtns.innerHTML = " ";
     for (i in ans) {
         var ansOpt = document.createElement("button")
         ansBtns.appendChild(ansOpt);
@@ -191,7 +193,6 @@ function ansSelect(target){
 //after answer is selected, go to next question
 function nextQues(){
     currentQues++;
-    
     showQues(quesArr[currentQues])
     
 };
