@@ -64,9 +64,6 @@ p {
     text-align: center;
 }
 
-/* #start-page {
-    display: none;
-} */
 
 input {
     border-color: var(--text-grey);
@@ -169,12 +166,10 @@ input {
     margin: 7px;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-button:hover{
+button:hover {
     background-color: var(--button-light);
 }
-
-

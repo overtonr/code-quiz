@@ -185,7 +185,6 @@ function ansSelect(target){
         return;
     }
     // checkAns(target);
-
     nextQues();
 };
 
