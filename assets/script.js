@@ -195,8 +195,8 @@ function setAns(ans) {
 
 function ansSelect(target) {
   if (currentQues === quesArr.length - 1) {
-    clearInterval(timeInterval);
     end();
+    clearTimeout(timeInterval);
   } else{
   checkAns(target);
   nextQues();
@@ -237,9 +237,9 @@ var finalScore;
     clearInterval(timeInterval);
     countdownEl.textContent = "quiz finished!";
     score.textContent = "your final score is " + finalScore;
-    
-    return;
+    clearInterval(timeInterval);
   };
+
 
 //   function showResults
 
