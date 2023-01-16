@@ -63,6 +63,14 @@ p {
     line-height: 29px;
     text-align: center;
 }
+#inp {
+    position: absolute;
+    height: 7px;
+    left: 618px;
+    top: 310px;
+    font-weight: 400;
+    font-size: 24px;
+}
 
 
 input {
