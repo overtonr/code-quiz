@@ -169,11 +169,9 @@ function startQuiz() {
 }
 
 //DOM manipulation that displays questions
-function showQues(question) {
-  setQues(question.prompt);
-  console.log(question.prompt);
-  setAns(question.answers);
-  console.log(question.answers);
+function showQues(show) {
+  setQues(show.prompt);
+  setAns(show.answers);
 }
 
 //text content set to questio
@@ -197,14 +195,14 @@ function setAns(ans) {
 }
 
 function ansSelect(target) {
-//   if (currentQues === quesArr.length - 1 || timeLeft === 0) {
-//     end();
-//     clearInterval(timeInterval);
-//     console.log("2");
-//   } else{
+  //   if (currentQues === quesArr.length - 1 || timeLeft === 0) {
+  //     end();
+  //     clearInterval(timeInterval);
+  //     console.log("2");
+  //   } else{
   checkAns(target);
   nextQues();
-  };
+}
 
 //after answer is selected, go to next question
 function nextQues() {
@@ -224,7 +222,7 @@ function checkAns(target) {
 }
 
 var finalScore;
-  //reset state
+//reset state
 // function finalRes(){
 //     finalScore = timeLeft;
 //     clearTimeout(timeInterval);
@@ -232,17 +230,16 @@ var finalScore;
 //     score.textContent = "your final score is " + finalScore;
 //     return;
 // }
-  function end() {
-    // finalRes();
-    questionCon.classList.add("hide");
-    resultsCon.classList.remove("hide");
-    currentQues = 0;
-    finalScore = timeLeft;
-    clearInterval(timeInterval);
-    countdownEl.textContent = "quiz finished!";
-    score.textContent = "your final score is " + finalScore;
-  };
-
+function end() {
+  // finalRes();
+  questionCon.classList.add("hide");
+  resultsCon.classList.remove("hide");
+  currentQues = 0;
+  finalScore = timeLeft;
+  clearInterval(timeInterval);
+  countdownEl.textContent = "quiz finished!";
+  score.textContent = "your final score is " + finalScore;
+}
 
 //   function showResults
 
