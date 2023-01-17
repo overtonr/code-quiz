@@ -171,7 +171,9 @@ function startQuiz() {
 //DOM manipulation that displays questions
 function showQues(question) {
   setQues(question.prompt);
+  console.log(question.prompt);
   setAns(question.answers);
+  console.log(question.answers);
 }
 
 //text content set to questio
