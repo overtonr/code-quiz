@@ -149,8 +149,9 @@ function timerFun() {
   var timeInterval = setInterval(function () {
     timeLeft--;
     countdownEl.textContent = timeLeft + " seconds left";
-    if (timeLeft === 0) {
+    if (timeLeft === 0 || currentQues === quesArr.length - 1) {
       clearInterval(timeInterval);
+      console.log("3");
       countdownEl.textContent = "time up!";
       end();
     }
@@ -194,13 +195,14 @@ function setAns(ans) {
 }
 
 function ansSelect(target) {
-  if (currentQues === quesArr.length - 1) {
-    end();
-    clearTimeout(timeInterval);
-  } else{
+//   if (currentQues === quesArr.length - 1 || timeLeft === 0) {
+//     end();
+//     clearInterval(timeInterval);
+//     console.log("2");
+//   } else{
   checkAns(target);
   nextQues();
-  }};
+  };
 
 //after answer is selected, go to next question
 function nextQues() {
@@ -237,7 +239,6 @@ var finalScore;
     clearInterval(timeInterval);
     countdownEl.textContent = "quiz finished!";
     score.textContent = "your final score is " + finalScore;
-    clearInterval(timeInterval);
   };
 
 
