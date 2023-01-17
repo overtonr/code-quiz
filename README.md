@@ -2,7 +2,7 @@
 
 [Take the quiz!](https://overtonr.github.io/challenge-code-quiz/)
 
-![Landing Page](../challenge-code-quiz/assets/images/landing-ss.png)
+![Landing Page](./assets/images/landing-ss.png)
 
 <br>
 
@@ -38,8 +38,8 @@ function setQues(question) {
     questionEl.textContent = question;
 };
 
-
 function setAns(ans) {
+    ansBtns.innerHTML = " ";
     for (i in ans) {
         var ansOpt = document.createElement("button")
         ansBtns.appendChild(ansOpt);
@@ -53,16 +53,16 @@ function setAns(ans) {
 
 Users have 80 seconds to answer all 10 questions. The faster the users selects all the correct answers, the higher their score will be. 
 
-![questions](../challenge-code-quiz/assets/images/question-ss.png) 
+![questions](./assets/images/question-ss.png) 
 
 If a user chooses incorrectly, 10 seconds will be penalized from the time-score. The goal is to try to get the most amount of questions correct in the fastest time possible.
 When the game is over, users have the ability to store their score alongside their initials.
 
-![results page with final score and form to input initials](../challenge-code-quiz/assets/images/final-score-ss.png) 
+![results page with final score and form to input initials](./assets/images/final-score-ss.png) 
 
 After submitting the form, they have the ability to restart the quiz and attept to get a faster time. There is also the option to clear these scores from the leaderboard.
 
-![leaderboard with options to clear scores or start a new game](../challenge-code-quiz/assets/images/high-scores-ss.png)
+![leaderboard with options to clear scores or start a new game](./assets/images/high-scores-ss.png)
 
 ## Technologies Used:
 * Github

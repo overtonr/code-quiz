@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <button id="view-score"> view high scores</button>
-        <button id="countdown-box"> timer</button>
+      <button id="view-score">view high scores</button>
+      <button id="countdown-box">timer</button>
     </header>
     <main>
-        <section>
+      <section>
         <!-- <div id="start-page" class="hide"> -->
-            <div id="start-page">
-            <h1 id="title">code quiz</h1>
-            <p>answer the following code-related questions within 80 seconds. be careful!
-                incorrect answers will penalize your time and score!</p>
-            <button id="start-btn">start quiz</button>
+        <div id="start-page">
+          <h1 id="title">code quiz</h1>
+          <p>
+            answer the following code-related questions within 80 seconds. be
+            careful! incorrect answers will penalize your time and score!
+          </p>
+          <button id="start-btn">start quiz</button>
         </div>
-        </section>
-        <section>
-            <div id="question-card" class="hide">
-         <h3 id ="question">question</h3>
-                <div id="answer-btns">
-                    <!-- <button class="ans">answer1</button>
+      </section>
+      <section>
+        <div id="question-card" class="hide">
+          <h3 id="question">question</h3>
+          <div id="answer-btns">
+            <!-- <button class="ans">answer1</button>
                     <button class="ans">answer2</button>
                     <button class="ans">answer3</button>
                     <button class="ans">answer4</button> -->
-                </div>
-
-            </div>
+          </div>
+          <div id="ans-return"></div>
+        </div>
+      </section>
+      <section>
+        <div id="end-page" class="hide">
+        <h1>all done!</h1>
+        <p id="player-score">
+          your final score is __
+        </p>
+        <div id = "inp">enter initials: <input id="initials" /></div>
+        <button id="submit-btn">submit</button>
+    </div>
+      </section>
+      <section id="leaderboard" class="hide">
+        <h1>high scores</h1>
+        <section id="saved">
+          <div id="in">RMO : 22</div>
+          <div id="in">RMO : 22</div>
+          <div id="in">RMO : 22</div>
         </section>
-         <section id="end-page" class="hide">
-            <h1>all done!</h1>
-            <p id="player-score">your final score is __
-                <br />
-                enter initials: <input id="initials">
-            </p>
-            <button id="submit-btn">submit</button>
-        </section>
-        <section id="leaderboard" class="hide">  
-            <h1> high scores</h1>
-            <section id="saved"> 
-                <div id="in">RMO : 22</div>
-                <div id="in">RMO : 22</div>
-                <div id="in">RMO : 22</div>
-            </section>
-            <button id="new-game">new game</button>
-            <!-- <button id="start-btn">new game</button> -->
-            <button id="clear">clear scores</button>
-        </section>
-
-
-
+        <button id="new-game">new game</button>
+        <!-- <button id="start-btn">new game</button> -->
+        <button id="clear">clear scores</button>
+      </section>
     </main>
 
     <script src="./assets/script.js"></script>
-</body>
-
+  </body>
 </html>
