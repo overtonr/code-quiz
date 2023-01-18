@@ -153,7 +153,7 @@ input {
 }
 
 #new-game {
-    position: relative;
+    position: absolute;
     width: 179px;
     height: var(--btn-height);
     left: 505px;
@@ -185,10 +185,7 @@ input {
     margin: 7px;
 }
 
-.end-butt{
-    position: relative;
-    top: 3px;
-}
+
 
 .hide {
     display: none;

@@ -143,10 +143,10 @@ var highScores = [];
 //start button click event listener
 startBtn.addEventListener("click", startQuiz);
 submitInitial.addEventListener("click", subIn);
-// clearBtn.addEventListener("click");
+clearBtn.addEventListener("click", clearScores);
 // viewEl.addEventListener("click");
 //event listener for new game
-// newGameBtn.addEventListener("click", restartQuiz);
+newGameBtn.addEventListener("click", restartQuiz);
 
 //game counter time el
 function timerFun() {
@@ -170,6 +170,19 @@ function startQuiz() {
   timerFun();
   showQues(quesArr[currentQues]);
 }
+
+function restartQuiz(){
+    currentQues = 0;
+    score = 0
+    timeLeft = 80;
+    timerFun();
+    questionCon.classList.remove("hide");
+    startCon.classList.add("hide");
+    resultsCon.classList.add("hide");
+    savedCon.classList.add("hide");
+    leaderCon.classList.add("hide");
+    showQues();
+};
 
 //DOM manipulation that displays questions
 function showQues(show) {
@@ -238,7 +251,7 @@ function end() {
 
 function subIn() {
   event.preventDefault();
-  var initIn = initialInput.value.trim();
+  var initIn = initialInput.value;
   if (initIn === "") {
     return;
   }
@@ -261,7 +274,7 @@ function saveScore(input) {
 console.log(highScores);
 
 function renderScore() {
-//   savedCon.innerHTML = "";
+  savedCon.innerHTML = "";
   for (var highscore of highScores) {
     var savedIn = document.createElement("div");
     savedIn.setAttribute("id", "in");
@@ -269,4 +282,14 @@ function renderScore() {
     savedCon.appendChild(savedIn);
     console.log(highscore.input, highscore.score);
   }
-}
+  leaderCon.classList.remove("hide");
+};
+
+
+function clearScores (){
+    highScores = [];
+    leaderCon.classList.remove("hide");
+    renderScore();
+    console.log(highScores);
+};
+
