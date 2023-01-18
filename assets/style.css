@@ -153,11 +153,11 @@ input {
 }
 
 #new-game {
-    position: absolute;
+    position: relative;
     width: 179px;
     height: var(--btn-height);
     left: 505px;
-    top: 360px;
+    top: 380px;
 }
 
 #clear {
@@ -165,7 +165,7 @@ input {
     width: 179px;
     height: var(--btn-height);
     left: 760px;
-    top: 360px;
+    top: 380px;
 }
 
 #saved {
@@ -178,11 +178,16 @@ input {
 }
 
 #in {
-    border: none;
+    border: solid 1px var(--text-grey);
     text-align: center;
-    /* background-color: var(--button-background); */
+    border-radius: 4px;
     display: block;
     margin: 7px;
+}
+
+.end-butt{
+    position: relative;
+    top: 3px;
 }
 
 .hide {

@@ -138,9 +138,13 @@ var quesArr = [
 var timeLeft = 80;
 var timeInterval;
 var currentQues;
+var highScores = [];
 
 //start button click event listener
 startBtn.addEventListener("click", startQuiz);
+submitInitial.addEventListener("click", subIn);
+// clearBtn.addEventListener("click");
+// viewEl.addEventListener("click");
 //event listener for new game
 // newGameBtn.addEventListener("click", restartQuiz);
 
@@ -149,9 +153,8 @@ function timerFun() {
   var timeInterval = setInterval(function () {
     timeLeft--;
     countdownEl.textContent = timeLeft + " seconds left";
-    if (timeLeft === 0 || currentQues === quesArr.length - 1) {
+    if (timeLeft === 0 || currentQues > quesArr.length - 1) {
       clearInterval(timeInterval);
-      console.log("3");
       countdownEl.textContent = "time up!";
       end();
     }
@@ -172,6 +175,7 @@ function startQuiz() {
 function showQues(show) {
   setQues(show.prompt);
   setAns(show.answers);
+  console.log(show.prompt, show.answers);
 }
 
 //text content set to questio
@@ -195,11 +199,6 @@ function setAns(ans) {
 }
 
 function ansSelect(target) {
-  //   if (currentQues === quesArr.length - 1 || timeLeft === 0) {
-  //     end();
-  //     clearInterval(timeInterval);
-  //     console.log("2");
-  //   } else{
   checkAns(target);
   nextQues();
 }
@@ -222,16 +221,10 @@ function checkAns(target) {
 }
 
 var finalScore;
+
 //reset state
-// function finalRes(){
-//     finalScore = timeLeft;
-//     clearTimeout(timeInterval);
-//     countdownEl.textContent = "quiz finished!";
-//     score.textContent = "your final score is " + finalScore;
-//     return;
-// }
+
 function end() {
-  // finalRes();
   questionCon.classList.add("hide");
   resultsCon.classList.remove("hide");
   currentQues = 0;
@@ -241,6 +234,39 @@ function end() {
   score.textContent = "your final score is " + finalScore;
 }
 
-//   function showResults
-
 //select answer element target
+
+function subIn() {
+  event.preventDefault();
+  var initIn = initialInput.value.trim();
+  if (initIn === "") {
+    return;
+  }
+  console.log(initIn);
+  saveScore(initIn);
+  resultsCon.classList.add("hide");
+  leaderCon.classList.remove("hide");
+  renderScore();
+  initIn.value = "";
+  // initialInput.disabled = true;
+}
+
+function saveScore(input) {
+  highScores.push({
+    input,
+    score: finalScore,
+  });
+  localStorage.setItem("highscores", JSON.stringify(highScores));
+}
+console.log(highScores);
+
+function renderScore() {
+//   savedCon.innerHTML = "";
+  for (var highscore of highScores) {
+    var savedIn = document.createElement("div");
+    savedIn.setAttribute("id", "in");
+    savedIn.textContent = highscore.input + ": " + highscore.score;
+    savedCon.appendChild(savedIn);
+    console.log(highscore.input, highscore.score);
+  }
+}
