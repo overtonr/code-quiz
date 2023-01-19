@@ -171,18 +171,18 @@ function startQuiz() {
   showQues(quesArr[currentQues]);
 }
 
-function restartQuiz(){
-    currentQues = 0;
-    score = 0
-    timeLeft = 80;
-    timerFun();
-    questionCon.classList.remove("hide");
-    startCon.classList.add("hide");
-    resultsCon.classList.add("hide");
-    savedCon.classList.add("hide");
-    leaderCon.classList.add("hide");
-    showQues();
-};
+function restartQuiz() {
+  currentQues = 0;
+  score = 0;
+  timeLeft = 80;
+  timerFun();
+  questionCon.classList.remove("hide");
+  startCon.classList.add("hide");
+  resultsCon.classList.add("hide");
+  savedCon.classList.add("hide");
+  leaderCon.classList.add("hide");
+  showQues(quesArr[currentQues]);
+}
 
 //DOM manipulation that displays questions
 function showQues(show) {
@@ -235,9 +235,8 @@ function checkAns(target) {
 
 var finalScore;
 
-//reset state
-
 function end() {
+  ansReturn.textContent = "";
   questionCon.classList.add("hide");
   resultsCon.classList.remove("hide");
   currentQues = 0;
@@ -248,20 +247,16 @@ function end() {
 }
 
 //select answer element target
-
 function subIn() {
-  event.preventDefault();
   var initIn = initialInput.value;
   if (initIn === "") {
     return;
   }
-  console.log(initIn);
   saveScore(initIn);
   resultsCon.classList.add("hide");
   leaderCon.classList.remove("hide");
   renderScore();
-  initIn.value = "";
-  // initialInput.disabled = true;
+  initialInput.value = "";
 }
 
 function saveScore(input) {
@@ -269,27 +264,24 @@ function saveScore(input) {
     input,
     score: finalScore,
   });
-  localStorage.setItem("highscores", JSON.stringify(highScores));
-}
-console.log(highScores);
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+};
 
 function renderScore() {
   savedCon.innerHTML = "";
-  for (var highscore of highScores) {
+  for (var i in highScores) {
     var savedIn = document.createElement("div");
     savedIn.setAttribute("id", "in");
-    savedIn.textContent = highscore.input + ": " + highscore.score;
     savedCon.appendChild(savedIn);
-    console.log(highscore.input, highscore.score);
-  }
+    savedIn.textContent = highScores[i].input + ": " + highScores[i].score;
+  };
   leaderCon.classList.remove("hide");
-};
+  savedCon.classList.remove("hide");
+}
 
-
-function clearScores (){
-    highScores = [];
-    leaderCon.classList.remove("hide");
-    renderScore();
-    console.log(highScores);
-};
-
+function clearScores() {
+  highScores = [];
+  leaderCon.classList.remove("hide");
+  renderScore();
+  console.log(highScores);
+}
