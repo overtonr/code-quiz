@@ -28,24 +28,29 @@
 
 
 #view-score {
-    position: absolute;
-    left: 30px;
-    top: 20px;
+    float: left;
 }
 
 #countdown-box {
-    position: absolute;
-    left: 1250px;
-    top: 20px;
+    float: right;
 }
-
+ #start-page{
+    display: flex;
+    flex-direction: column;
+ }
 
 h1 {
-    position: absolute;
-    width: 450px;
+    display: block;
+    margin: 100px auto 30px;
+
+    /* flex: auto; */
+    /* justify-content: center;
+    align-content: center; */
+    /* position: absolute; */
+    /* width: 450px; */
     height: 96px;
-    left: 495px;
-    top: 177px;
+    /* left: 495px;
+    top: 177px; */
     font-weight: 700;
     font-size: 48px;
     line-height: 58px;
@@ -53,8 +58,13 @@ h1 {
 }
 
 p {
-    position: absolute;
-    width: 463px;
+    display: block;
+    margin: auto;
+
+    /* justify-content: center;
+    align-content: center; */
+    /* position: absolute; */
+    /* width: 400px; */
     height: 197px;
     left: 488px;
     top: 250px;
@@ -63,6 +73,7 @@ p {
     line-height: 29px;
     text-align: center;
 }
+
 #inp {
     position: absolute;
     height: 7px;
@@ -81,11 +92,13 @@ input {
 
 #submit-btn,
 #start-btn {
-    position: absolute;
+    /* position: absolute; */
+    display: block;
+    margin: auto;
     width: 179px;
     height: var(--btn-height);
-    left: 630px;
-    top: 398px;
+    /* left: 630px;
+    top: 398px; */
 
 }
 
