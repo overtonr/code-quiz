@@ -26,28 +26,30 @@
     text-align: center;
 }
 
-
+header{
+    display: inline;
+}
 #view-score {
+    position: absolute;
+    top: 15px;
+    justify-content: flex-start;
     float: left;
+    /* display: inline; */
 }
 
 #countdown-box {
+    position: absolute;
+    top: 15px;
     float: right;
+    justify-content: flex-end;
+    /* display: inline; */
 }
- #start-page{
-    display: flex;
-    flex-direction: column;
- }
+
 
 h1 {
-    display: block;
-    margin: 100px auto 30px;
-
-    /* flex: auto; */
-    /* justify-content: center;
-    align-content: center; */
     /* position: absolute; */
-    /* width: 450px; */
+    display: block;
+    margin: 90px auto 3px;
     height: 96px;
     /* left: 495px;
     top: 177px; */
@@ -55,16 +57,14 @@ h1 {
     font-size: 48px;
     line-height: 58px;
     text-align: center;
+    width: max-content;
 }
 
 p {
-    display: block;
-    margin: auto;
-
-    /* justify-content: center;
-    align-content: center; */
     /* position: absolute; */
-    /* width: 400px; */
+    display: flex;
+    margin: 2px 1px 30px;
+    padding: 0px;
     height: 197px;
     left: 488px;
     top: 250px;
@@ -72,6 +72,8 @@ p {
     font-size: 24px;
     line-height: 29px;
     text-align: center;
+    width: 90%;
+    
 }
 
 #inp {
@@ -92,13 +94,17 @@ input {
 
 #submit-btn,
 #start-btn {
-    /* position: absolute; */
+    position: relative;
+    align-content: center;
+    /* justify-content: space-evenly; */
+    /* margin-top: 30px;  */
+    justify-content: end;
     display: block;
     margin: auto;
     width: 179px;
     height: var(--btn-height);
-    /* left: 630px;
-    top: 398px; */
+    /* left: 630px; */
+    /* top: 398px; */
 
 }
 
