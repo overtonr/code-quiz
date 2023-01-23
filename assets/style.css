@@ -122,8 +122,12 @@ input {
 #ans-return {
     color: var(--light-background);
     position: relative;
-    left: 715px;
-    top: 315px;
+    justify-content: end;
+    /* float: right; */
+    /* left: 715px; */
+    /* top: 315px; */
+    bottom: 0px;
+    right: -85%;
     background-color: var(--text-grey);
     width: 2px;
     font-weight: 400;
@@ -134,11 +138,11 @@ h3 {
     position: relative;
     overflow-wrap: break-word;
     /* word-wrap: normal; */
-    /* width: 560px; */
+    width: 60%;
     height: 77px;
     margin: auto;
     /* left: 131px; */
-    top: 67px;
+    top: 55px;
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
@@ -154,7 +158,7 @@ h3 {
     width: min-content;
     margin: 55px auto;
     left: 2%;
-    top: 60px;
+    top: 70px;
 }
 
 .ans {
