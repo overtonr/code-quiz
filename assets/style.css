@@ -112,10 +112,11 @@ input {
 #question-card {
     background-color: var(--text-grey);
     position: absolute;
-    width: 826px;
+    width: 80%;
     height: 475px;
-    left: 296px;
-    top: 150px;
+    margin: 150px auto;
+    left: 10%;
+    /* top: 150px; */
 }
 
 #ans-return {
@@ -131,9 +132,12 @@ input {
 
 h3 {
     position: relative;
-    width: 560px;
+    overflow-wrap: break-word;
+    /* word-wrap: normal; */
+    /* width: 560px; */
     height: 77px;
-    left: 131px;
+    margin: auto;
+    /* left: 131px; */
     top: 67px;
     font-weight: 500;
     font-size: 24px;
@@ -145,10 +149,12 @@ h3 {
 
 
 #answer-btns {
-    position: absolute;
+    position: relative;
     background-color: var(--text-grey);
-    left: 230px;
-    top: 175px;
+    width: min-content;
+    margin: 55px auto;
+    left: 2%;
+    top: 60px;
 }
 
 .ans {
@@ -161,6 +167,7 @@ h3 {
     color: var(--text-grey);
     display: block;
     margin: 17px;
+    border-radius: 4px;
 }
 
 input {

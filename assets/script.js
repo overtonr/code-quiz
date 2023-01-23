@@ -135,7 +135,8 @@ var quesArr = [
   },
 ];
 
-var timeLeft = 80;
+// var timeLeft = 80;
+var timeLeft = 8000;
 var timeInterval;
 var currentQues;
 var highScores = [];
