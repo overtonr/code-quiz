@@ -34,15 +34,16 @@ header{
     top: 15px;
     justify-content: flex-start;
     float: left;
-    /* display: inline; */
+    display: inline;
 }
 
 #countdown-box {
     position: absolute;
     top: 15px;
+    right: -10px;
     float: right;
-    justify-content: flex-end;
-    /* display: inline; */
+    /* justify-content: flex-end; */
+    display: inline;
 }
 
 
@@ -55,19 +56,19 @@ h1 {
     top: 177px; */
     font-weight: 700;
     font-size: 48px;
-    line-height: 58px;
-    text-align: center;
+    line-height: 55px;
+    /* text-align: center; */
     width: max-content;
 }
 
 p {
     /* position: absolute; */
     display: flex;
-    margin: 2px 1px 30px;
+    margin: 2px auto 30px;
     padding: 0px;
-    height: 197px;
-    left: 488px;
-    top: 250px;
+    /* height: 197px; */
+    /* left: 488px; */
+    /* top: 250px; */
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
