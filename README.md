@@ -1,6 +1,6 @@
 # Code Quiz
 
-[Take the quiz!](https://overtonr.github.io/challenge-code-quiz/)
+[Take the quiz!](https://overtonr.github.io/code-quiz/)
 
 ![Landing Page](./assets/images/landing-ss.png)
 
