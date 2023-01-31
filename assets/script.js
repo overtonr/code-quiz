@@ -145,7 +145,7 @@ var highScores = [];
 startBtn.addEventListener("click", startQuiz);
 submitInitial.addEventListener("click", subIn);
 clearBtn.addEventListener("click", clearScores);
-// viewEl.addEventListener("click");
+// viewEl.addEventListener("click", renderScore);
 //event listener for new game
 newGameBtn.addEventListener("click", restartQuiz);
 
@@ -245,6 +245,7 @@ function end() {
   clearInterval(timeInterval);
   countdownEl.textContent = "quiz finished!";
   score.textContent = "your final score is " + finalScore;
+  console.log(finalScore);
 }
 
 //select answer element target
@@ -270,6 +271,7 @@ function saveScore(input) {
 
 function renderScore() {
   savedCon.innerHTML = "";
+  startCon.classList.add("hide");
   for (var i in highScores) {
     var savedIn = document.createElement("div");
     savedIn.setAttribute("id", "in");
@@ -279,6 +281,7 @@ function renderScore() {
   leaderCon.classList.remove("hide");
   savedCon.classList.remove("hide");
 }
+
 
 function clearScores() {
   highScores = [];

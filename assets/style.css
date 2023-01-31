@@ -40,9 +40,8 @@ header{
 #countdown-box {
     position: absolute;
     top: 15px;
-    right: -10px;
+    right: 10px;
     float: right;
-    /* justify-content: flex-end; */
     display: inline;
 }
 
@@ -73,17 +72,20 @@ p {
     font-size: 24px;
     line-height: 29px;
     text-align: center;
-    width: 90%;
+    justify-content: center;
+    /* width: 90%; */
     
 }
 
 #inp {
     position: absolute;
     height: 7px;
-    left: 618px;
-    top: 310px;
+    left: 40%;
+    top: 150px;
     font-weight: 400;
     font-size: 24px;
+    justify-content: center;
+    margin: auto;
 }
 
 
@@ -176,36 +178,37 @@ h3 {
 
 input {
     width: 65px;
+    display: inline;
 }
 
 #saved {
     border: var(--text-grey);
     width: 65px;
+    justify-content: center;
 }
 
 #new-game {
     position: absolute;
     width: 179px;
     height: var(--btn-height);
-    left: 505px;
-    top: 380px;
+    left: 35%;
+    top: 330px;
 }
 
 #clear {
     position: absolute;
     width: 179px;
     height: var(--btn-height);
-    left: 760px;
-    top: 380px;
+    left: 55%;
+    top: 330px;
 }
 
 #saved {
-    position: absolute;
     text-align: center;
     width: 145px;
     height: 26px;
     left: 660px;
-    top: 275px;
+    margin:auto;
 }
 
 #in {
@@ -216,7 +219,10 @@ input {
     margin: 7px;
 }
 
-
+#end-btns {
+    justify-content: center;
+    margin: auto;
+}
 
 .hide {
     display: none;
